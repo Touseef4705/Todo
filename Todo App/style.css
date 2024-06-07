@@ -1,0 +1,240 @@
+/* style.css */
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    padding-top: 20px;
+    user-select: none;
+}
+
+/* Container for the todo app */
+.container {
+    background-color: #ffffff;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Container for the input and button */
+.container div {
+    margin: 15px 0;
+}
+
+/* Styling the input field */
+#taskInput {
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styling the add task button */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#logOut{
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Styling the task list */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0;
+    width: 100%;
+}
+
+/* Styling each task item */
+#taskList li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+/* Hover effect for task items */
+#taskList li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling the task text */
+#taskList li span {
+    flex-grow: 1;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the secondary button inside the span */
+#taskList li span button {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the secondary button */
+#taskList li span button:hover {
+    background-color: #138496;
+}
+
+/* Styling the delete button for each task */
+#taskList li button:last-child {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#taskList li button {
+    background: #356fdc;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the delete button */
+#taskList li button:last-child:hover {
+    background: #c82333;
+}
+
+#taskList li button:hover {
+    background: #3546dc;
+}
+
+
+/* modal.css */
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling the edit task input */
+#editTaskInput {
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    transition: border-color 0.3s;
+}
+
+#editTaskInput:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styling the save button */
+.modal-content button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Date */
+p{
+    font-size: 12px;
+    margin-top: 20px;
+}
